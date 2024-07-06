@@ -295,7 +295,9 @@
               return;
             } else {
              //if (mainUrl && 
-                 alert("Welcome Back! Mr/Mis"+ data.UserName + ".");// ) {
+              if(!isOtpSent) {
+                 alert("Welcome Back! Mr/Mis "+ data.UserName + ".");// ) {
+              }
                 //window.open(mainUrl);
                //return;
               //}
