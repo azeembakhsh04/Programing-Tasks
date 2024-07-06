@@ -295,7 +295,8 @@
               return;
             } else {
              if (mainUrl && confirm("Great Job! "+ data.UserName + " you are verified user.") ) {
-                window.open(mainUrl)
+                window.open(mainUrl);
+               return;
               }
             }
           }
