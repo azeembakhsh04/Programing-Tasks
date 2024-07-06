@@ -294,7 +294,7 @@
               alert("The user is banned you cannot join our community");
               return;
             } else {
-              if (mainUrl) {
+             if (mainUrl && confirm("Great Job! "+ data.UserName + " you are verified user.") ) {
                 window.open(mainUrl)
               }
             }
@@ -361,25 +361,6 @@
         }).catch((error) => {
           console.error('Error getting data:', error);
         });
-
-      /*
-          db.ref('VerifiedUsers').orderByChild("UserPhoneNo").equalTo(formObj.UserPhoneNo).once('value')
-            .then((snapshot) => {
-              if (snapshot.exists()) {
-                let data = snapshot.val();
-                console.log(data);
-                /*
-                data.forEach((val, key) => {
-                  console.log(val)
-                });
-                
-                alert('User with this phone number is already verified.');
-                if (mainUrl) {
-                  window.open(mainUrl);
-                }
-                //return;
-              }
-      */
     });
   </script>
 </body>
